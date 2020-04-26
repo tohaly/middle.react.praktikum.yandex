@@ -1,0 +1,7 @@
+.chat-list {
+  background-color: #1c1d21;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding: 16px 0;
+  overflow-y: scroll;
+}

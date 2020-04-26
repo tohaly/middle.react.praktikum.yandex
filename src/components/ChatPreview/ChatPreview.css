@@ -1,0 +1,64 @@
+.chat-preview {
+  width: 400px;
+  width: 100%;
+  display: flex;
+  padding: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.chat-preview_active {
+  background-color: #7d8b8f;
+}
+
+.chat-preview__img {
+  max-width: 60px;
+  width: 100%;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.chat-preview__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-preview__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 4px 0;
+}
+
+.chat-preview__title {
+  font-size: 16px;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.chat-preview__time {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.chat-preview__content {
+  display: flex;
+  padding: 4px 0;
+  width: 320px;
+}
+
+.chat-preview__companion {
+  color: #89d;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.chat-preview__text {
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

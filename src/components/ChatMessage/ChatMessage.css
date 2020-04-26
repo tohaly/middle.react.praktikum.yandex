@@ -1,0 +1,10 @@
+.message {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 8px;
+  background-color: #2f8be7;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+}

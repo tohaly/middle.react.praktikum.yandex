@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
