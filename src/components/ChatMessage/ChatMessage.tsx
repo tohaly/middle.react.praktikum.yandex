@@ -5,8 +5,8 @@ interface Props {
   message: string;
 }
 
-const Message = (props: Props) => {
-  return <li className="message">{props.message}</li>;
+const Message = ({ message }: Props) => {
+  return <li className="message">{message}</li>;
 };
 
 export default Message;
