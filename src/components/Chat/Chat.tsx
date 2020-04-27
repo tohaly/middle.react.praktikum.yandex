@@ -1,7 +1,7 @@
 import React from "react";
 import "./Chat.css";
 import ChatMessages from "../ChatMessages/ChatMessages";
-import ChatList from "../ChatList/ChatList";
+import { ChatList } from "../ChatList/ChatList";
 
 import { testData } from "./testData"; // Test data
 
