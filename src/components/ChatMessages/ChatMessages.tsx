@@ -1,17 +1,16 @@
 import React from "react";
 import Message from "../ChatMessage/ChatMessage";
-import uniqid from "uniqid";
 import "./ChatMessages.css";
 
 interface Props {
   messages: string[];
 }
 
-const ChatMessage = (props: Props) => {
+const ChatMessage = ({ messages }: Props) => {
   return (
     <ul className="chat-messages">
-      {props.messages.map((message) => {
-        return <Message key={uniqid("message-")} message={message} />;
+      {messages.map((message, index) => {
+        return <Message key={index} message={message} />; // В таком случае, можно так выйти из ситуации) Либо как мне кажется, у каждого сообщения должен быть свой _id
       })}
     </ul>
   );
