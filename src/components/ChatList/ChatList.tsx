@@ -1,5 +1,5 @@
 import React from "react";
-import ChatPreview from "../ChatPreview/ChatPreview";
+import { ChatPreview } from "../ChatPreview/ChatPreview";
 import "./ChatList.css";
 
 interface PrevProps {
@@ -18,31 +18,25 @@ interface Props {
   handleSetMessages: (key: string) => void;
 }
 
-export default class ChatList extends React.Component<Props> {
-  getSortedChats(): PrevProps[] {
-    return [...this.props.data].sort((a, b) => {
-      return b.lastMessageDate - a.lastMessageDate;
-    });
-  }
+const getSortedChats = (data: PrevProps[]): PrevProps[] => {
+  return data.sort((a, b) => {
+    return b.lastMessageDate - a.lastMessageDate;
+  });
+};
 
-  render() {
-    return (
-      <div className="chat-list">
-        {this.getSortedChats().map((item) => {
-          let activate: boolean = false;
-          if (this.props.activeChat === item.id) {
-            activate = true;
-          }
-          return (
-            <ChatPreview
-              key={item.id}
-              handleClick={this.props.handleSetMessages}
-              isActive={activate}
-              {...item}
-            />
-          );
-        })}
-      </div>
-    );
-  }
-}
+export const ChatList = (props: Props) => {
+  return (
+    <div className="chat-list">
+      {getSortedChats(props.data).map((item) => {
+        return (
+          <ChatPreview
+            key={item.id}
+            handleClick={props.handleSetMessages}
+            isActive={props.activeChat === item.id ? true : false}
+            {...item}
+          />
+        );
+      })}
+    </div>
+  );
+};
