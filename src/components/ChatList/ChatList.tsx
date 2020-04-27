@@ -1,5 +1,5 @@
 import React from "react";
-import ChatPreview from "../ChatPreview/ChatPreview";
+import { ChatPreview } from "../ChatPreview/ChatPreview";
 import "./ChatList.css";
 
 interface PrevProps {

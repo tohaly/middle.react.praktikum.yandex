@@ -21,7 +21,7 @@ const parseDate = (date: number) => {
   });
 };
 
-const ChatPreview = (props: Props) => {
+export const ChatPreview = (props: Props) => {
   const {
     chatIcon,
     chatName,
@@ -54,5 +54,3 @@ const ChatPreview = (props: Props) => {
     </div>
   );
 };
-
-export default ChatPreview;
